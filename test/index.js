@@ -6,7 +6,7 @@ const spawn = require('child_process').spawn;
 
 describe('project-watcher', function () {
   it('should have unit test!', function (done) {
-    new ProjectWatcher('/Users/apple/Documents/workspace').on('codingHour', event => {
+    new ProjectWatcher(process.cwd()).on('codingHour', event => {
       console.log(event);
       assert(event !== null);
       done();
