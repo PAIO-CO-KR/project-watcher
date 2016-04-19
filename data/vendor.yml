@@ -312,3 +312,8 @@
 
 # Jenkins Pipeline
 - ^Jenkinsfile$
+
+# Jetbrain
+- ___jb_tmp___$
+- ___jb_old___$
+- (^|/)\.idea/workspace\.xml$
