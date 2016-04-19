@@ -41,8 +41,8 @@
   },
   "license": "MIT",
   "dependencies": {
-    "atom-linguist": "^0.1.0",
-    "chokidar": "^1.4.3",
-    "coffee-script": "^1.10.0"
+    "atom-linguist": "git@github.com:kyuwoo-choi/atom-linguist.git",
+    "coffee-script": "^1.10.0",
+    "js-yaml": "^3.6.0"
   }
 }
