@@ -1,11 +1,16 @@
-'use strict';// eslint-disable-line strict
+'use strict';// eslint-disable-line
 
 var assert = require('assert');
 var ProjectWatcher = require('../lib');
+const spawn = require('child_process').spawn;
 
 describe('project-watcher', function () {
-  it('should have unit test!', function () {
-    console.log(new ProjectWatcher());
-    assert(true, 'we expected this package author to add actual unit tests.');
+  it('should have unit test!', function (done) {
+    new ProjectWatcher('/Users/apple/Documents/workspace').on('codingHour', event => {
+      console.log(event);
+      assert(event !== null);
+      done();
+    });
+    setTimeout(() => spawn('touch', [`${process.cwd()}/package.json`]), 100);
   });
 });
